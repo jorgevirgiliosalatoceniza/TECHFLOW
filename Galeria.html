@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow · Galeria</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f3e5f5 0%, #fce4ec 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.95);
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(123, 75, 154, 0.2);
+        }
+       .titulo-com-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 4px solid #e8e0f0;
+            padding-bottom: 10px;
+        }
+        .titulo-com-logo img {
+            height: 90px;
+            width: auto;
+        }
+        .titulo-com-logo h1 {
+            color: #7b4b9a;
+            font-size: 2.5rem;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .nav-bar {
+            background: #f3e5f5;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .nav-bar a {
+            text-decoration: none;
+            color: #4a1942;
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+        .nav-bar a:hover,
+        .nav-bar a.active {
+            background: #7b4b9a;
+            color: white;
+            transform: scale(1.05);
+        }
+        .btn-rosa {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #7b4b9a, #c2185b);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-rosa:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(123, 75, 154, 0.4);
+        }
+        .card {
+            background: #fff5f7;
+            border-radius: 20px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 6px solid #7b4b9a;
+        }
+        .card h3 {
+            color: #7b4b9a;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #4a1942;
+            line-height: 1.8;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e8e0f0;
+            text-align: center;
+        }
+        .anchor-link {
+            background: #f3e5f5;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #4a1942;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .anchor-link:hover {
+            background: #7b4b9a;
+            color: white;
+        }
+        .footer-links {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 20px 0;
+        }
+        .galeria-item {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            text-align: center;
+            transition: 0.3s;
+        }
+        .galeria-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(123, 75, 154, 0.15);
+        }
+        .galeria-item h4 {
+            color: #7b4b9a;
+            margin-bottom: 10px;
+        }
+        .galeria-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            border: 2px solid #f3e5f5;
+        }
+        .galeria-item video {
+            width: 100%;
+            border-radius: 15px;
+            border: 2px solid #f3e5f5;
+            background: #1a1a2e;
+        }
+        .galeria-item audio {
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 30px;
+        }
+        .galeria-item p {
+            margin-top: 10px;
+            color: #4a1942;
+            font-size: 0.95rem;
+        }
+        .badge {
+            display: inline-block;
+            background: #fce4ec;
+            color: #c2185b;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="topo">
+
+        <div class="titulo-com-logo">
+            <img src=" TechFlow.jpeg" alt="Logotipo TechFlow">
+            <h1>TechFlow · Galeria</h1>
+        </div>
+        <p style="color: #4a1942; margin: 10px 0;">Conteudo multimedia sobre HTML e CSS.</p>
+
+        <!-- MENU DE NAVEGACAO -->
+        <div class="nav-bar">
+            <a href="inicio.html">Inicio</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="galeria.html" class="active">Galeria</a>
+            <a href="servicos.html">Servicos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="blog.html">Blog</a>
+            <a href="#rodape">Rodape</a>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== SECCAO GALERIA ===== -->
+        <!-- ========================================================== -->
+
+        <div class="card">
+            <h3>Multimedia</h3>
+            <p>Explore imagens, videos e audios relacionados com desenvolvimento web.</p>
+        </div>
+
+        <div class="galeria-grid">
+
+            <!-- IMAGEM 1: HTML5 -->
+            <div class="galeria-item">
+                <h4>Logo HTML5</h4>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png" 
+                     alt="Logo do HTML5">
+                <p>Logo oficial da linguagem HTML5</p>
+                <span class="badge">Imagem</span>
+            </div>
+
+            <!-- IMAGEM 2: CSS3 -->
+            <div class="galeria-item">
+                <h4>Logo CSS3</h4>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/120px-CSS3_logo_and_wordmark.svg.png" 
+                     alt="Logo do CSS3">
+                <p>Logo oficial da linguagem CSS3</p>
+                <span class="badge">Imagem</span>
+            </div>
+
+            <!-- IMAGEM 3: VS Code -->
+            <div class="galeria-item">
+                <h4>VS Code</h4>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/120px-Visual_Studio_Code_1.35_icon.svg.png" 
+                     alt="Logo do Visual Studio Code">
+                <p>Editor de codigo mais usado para HTML e CSS</p>
+                <span class="badge">Imagem</span>
+            </div>
+
+            <div class="galeria-item">
+                <h4>Video - HTML5</h4>
+                <video controls>
+                    <source src=" Video_HTML.mp4" type="video/mp4">
+                </video>
+                <p>Video sobre HTML5</p>
+                <span class="badge">Video</span>
+            </div>
+
+            <div class="galeria-item">
+                <h4>Audio - HTML5</h4>
+                <audio controls>
+                    <source src="áudio sobre a web.aac" type="audio/aac">
+                </audio>
+                <p>Audio sobre desenvolvimento web</p>
+                <span class="badge">Audio</span>
+            </div>
+
+        </div>
+
+        <!-- LINKS RELACIONADOS -->
+        <div class="card" style="border-left-color: #c2185b;">
+            <h3>Links Relacionados</h3>
+            <p><strong>Links internos:</strong></p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0;">
+                <a href="inicio.html" class="anchor-link">Inicio</a>
+                <a href="sobre.html" class="anchor-link">Sobre</a>
+                <a href="servicos.html" class="anchor-link">Servicos</a>
+            </div>
+            <p><strong>Links externos:</strong></p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0;">
+                <a href="https://developer.mozilla.org/pt-BR/" target="_blank" rel="noopener noreferrer" class="btn-rosa" style="font-size:0.9rem; padding: 10px 20px;">MDN Web Docs</a>
+                <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer" class="btn-rosa" style="font-size:0.9rem; padding: 10px 20px; background: #28a745;">W3Schools</a>
+            </div>
+        </div>
+
+        <!-- ===== RODAPE ===== -->
+        <footer class="footer" id="rodape">
+
+            <p style="font-weight: 600; color: #7b4b9a;">TechFlow · 2026</p>
+
+            <p style="color: #4a1942;">Desenvolvido com carinho para o curso de HTML</p>
+
+            <div class="footer-links">
+                <a href="#topo" class="anchor-link">Voltar ao Topo</a>
+                <a href="inicio.html" class="anchor-link">Inicio</a>
+                <a href="contacto.html" class="anchor-link">Contacto</a>
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>

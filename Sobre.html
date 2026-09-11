@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow · Sobre</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f3e5f5 0%, #e8e0f0 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.95);
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(123, 75, 154, 0.2);
+        }
+
+        /* ===== TÍTULO COM LOGOTIPO ===== */
+        .titulo-com-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 4px solid #e8e0f0;
+            padding-bottom: 10px;
+        }
+        .titulo-com-logo img {
+            height: 90px;
+            width: auto;
+        }
+        .titulo-com-logo h1 {
+            color: #7b4b9a;
+            font-size: 2.5rem;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        /* ===== MENU ===== */
+        .nav-bar {
+            background: #f3e5f5;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .nav-bar a {
+            text-decoration: none;
+            color: #4a1942;
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+        .nav-bar a:hover,
+        .nav-bar a.active {
+            background: #7b4b9a;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* ===== CONTEÚDO ===== */
+        .sobre-destaque {
+            background: linear-gradient(135deg, #f3e5f5, #fce4ec);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 3px solid #e8e0f0;
+            margin-bottom: 2rem;
+        }
+        .sobre-destaque h2 {
+            color: #7b4b9a;
+            margin-bottom: 10px;
+        }
+        .sobre-destaque p {
+            color: #4a1942;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .card {
+            background: #fff5f7;
+            border-radius: 20px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 6px solid #7b4b9a;
+        }
+        .card h3 {
+            color: #7b4b9a;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #4a1942;
+            line-height: 1.8;
+        }
+        .card ul {
+            padding-left: 20px;
+            color: #4a1942;
+            line-height: 2;
+        }
+        .card ol {
+            padding-left: 20px;
+            color: #4a1942;
+            line-height: 2;
+        }
+
+        .btn-rosa {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #c2185b, #7b4b9a);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-rosa:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(194, 24, 91, 0.4);
+        }
+
+        .info-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 15px;
+        }
+        .info-grid div {
+            flex: 1 1 200px;
+        }
+        .info-grid h4 {
+            color: #7b4b9a;
+            margin-bottom: 8px;
+        }
+
+        /* ===== RECURSOS PARA DOWNLOAD ===== */
+        .download-card {
+            background: #fce4ec;
+            border-radius: 20px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 6px solid #f9a825;
+        }
+        .download-card h3 {
+            color: #c2185b;
+            margin-bottom: 5px;
+        }
+        .download-card p {
+            color: #4a1942;
+            margin-bottom: 15px;
+        }
+        .download-card .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* ===== RODAPÉ SIMPLES ===== */
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e8e0f0;
+            text-align: center;
+        }
+        .anchor-link {
+            background: #f3e5f5;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #4a1942;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .anchor-link:hover {
+            background: #7b4b9a;
+            color: white;
+        }
+        .footer-links {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        @media (max-width: 680px) {
+            .titulo-com-logo {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-bar {
+                gap: 5px;
+            }
+            .nav-bar a {
+                font-size: 0.9rem;
+                padding: 6px 14px;
+            }
+            .download-card .btn-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="topo">
+
+        <!-- ===== TÍTULO COM LOGOTIPO ===== -->
+        <div class="titulo-com-logo">
+            <img src=" TechFlow.jpeg" alt="Logotipo TechFlow">
+            <h1>TechFlow · Sobre</h1>
+        </div>
+        <p style="color: #4a1942; margin: 10px 0;">Conheca mais sobre este projecto.</p>
+
+        <!-- ===== MENU ===== -->
+        <div class="nav-bar">
+            <a href="inicio.html">Inicio</a>
+            <a href="sobre.html" class="active">Sobre</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="servicos.html">Servicos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="blog.html">Blog</a>
+            <a href="#rodape" class="anchor-link">Rodape</a>
+        </div>
+
+        <!-- ===== CRIADORA DO PROJECTO (NOME + IMAGEM) ===== -->
+        <div class="card" style="border-left-color: #c2185b; background: #fce4ec;">
+            <h3>Criadora do projecto</h3>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-top: 15px;">
+                <img src=" IMG- ceniza.jpg" 
+                     alt="Ceniza Salato - Criadora do projecto TechFlow" 
+                     style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid #c2185b; object-fit: cover;">
+                <div>
+                    <p><strong>Nome:</strong> Ceniza Salato</p>
+                    <p><strong>Curso:</strong> Desenvolvimento Web</p>
+                    <p><strong>Email:</strong> jorgevirgiliosalatoceniza@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== CONTEÚDO DA PÁGINA SOBRE ===== -->
+        <!-- ========================================================== -->
+
+        <div class="sobre-destaque">
+            <h2>Sobre o projecto</h2>
+            <p>
+                <strong>Visao:</strong> Criar um website educativo que sirva como portfolio de aprendizagem em 
+                desenvolvimento web, com foco na usabilidade e na estetica.
+            </p>
+            <p>
+                <strong>Objectivos:</strong> Demonstrar dominio de HTML5 e CSS3, estruturar conteudos de forma clara, 
+                e aplicar conceitos de design responsivo e acessibilidade.
+            </p>
+        </div>
+
+        <!-- TECNOLOGIAS E ETAPAS -->
+        <div class="card">
+            <div class="info-grid">
+                <div>
+                    <h4>Tecnologias usadas</h4>
+                    <ul>
+                        <li>HTML5 semantico</li>
+                        <li>CSS3 (flexbox, variaveis)</li>
+                        <li>Media queries</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Etapas de desenvolvimento</h4>
+                    <ol>
+                        <li>Estruturacao do conteudo</li>
+                        <li>Estilizacao e layout</li>
+                        <li>Teste de responsividade</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== RECURSOS PARA DOWNLOAD ===== -->
+        <div class="download-card">
+            <h3>Recursos para download</h3>
+            <p>Baixe os materiais do nosso projecto:</p>
+            <div class="btn-group">
+                <a href=" Download  do projecto.docx" download class="btn-rosa" style="font-size:0.9rem; padding: 10px 25px;">
+                    Baixar projecto (docx)
+                </a>
+                <a href=" D.1-- DPW HTML.pdf" download class="btn-rosa" style="font-size:0.9rem; padding: 10px 25px; background: linear-gradient(135deg, #7b4b9a, #c2185b);">
+                    Baixar guia (pdf)
+                </a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== RODAPÉ SIMPLES ===== -->
+        <!-- ========================================================== -->
+        <footer class="footer" id="rodape">
+
+            <p style="font-weight: 600; color: #7b4b9a;">TechFlow · 2026</p>
+
+            <p style="color: #4a1942;">Desenvolvido com carinho para o curso de HTML</p>
+
+            <div class="footer-links">
+                <a href="#topo" class="anchor-link">Voltar ao Topo</a>
+                <a href="inicio.html" class="anchor-link">Inicio</a>
+                <a href="contacto.html" class="anchor-link">Contacto</a>
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>

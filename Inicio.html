@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow · Inicio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.95);
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(194, 24, 91, 0.2);
+        }
+
+        /* ===== TÍTULO COM LOGOTIPO ===== */
+       .titulo-com-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 4px solid #e8e0f0;
+            padding-bottom: 10px;
+        }
+        .titulo-com-logo img {
+            height: 90px;
+            width: auto;
+        }
+        .titulo-com-logo h1 {
+            color: #7b4b9a;
+            font-size: 2.5rem;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        /* ===== MENU ===== */
+        .nav-bar {
+            background: #fce4ec;
+            padding: 12px 15px;
+            border-radius: 15px;
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .nav-bar a {
+            text-decoration: none;
+            color: #4a1942;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 25px;
+            transition: 0.3s;
+            font-size: 0.95rem;
+        }
+        .nav-bar a:hover,
+        .nav-bar a.active {
+            background: #c2185b;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* ===== DESTAQUE ===== */
+        .destaque {
+            background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 3px solid #f48fb1;
+            text-align: left;
+        }
+        .destaque h2 {
+            color: #c2185b;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .destaque p {
+            color: #4a1942;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            max-width: 650px;
+        }
+        .destaque code {
+            background: rgba(194, 24, 91, 0.1);
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            color: #c2185b;
+        }
+
+        /* ===== BOTÃO ===== */
+        .btn-rosa {
+            display: inline-block;
+            padding: 10px 28px;
+            background: linear-gradient(135deg, #c2185b, #7b4b9a);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        .btn-rosa:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(194, 24, 91, 0.4);
+        }
+
+        /* ===== RODAPÉ ===== */
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f48fb1;
+            text-align: center;
+        }
+        .anchor-link {
+            background: #fce4ec;
+            padding: 8px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #4a1942;
+            font-weight: 600;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+        .anchor-link:hover {
+            background: #c2185b;
+            color: white;
+        }
+        .footer-links {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        @media (max-width: 680px) {
+            .titulo-com-logo {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-bar {
+                gap: 5px;
+            }
+            .nav-bar a {
+                font-size: 0.8rem;
+                padding: 5px 12px;
+            }
+            .destaque {
+                padding: 1.5rem;
+            }
+            .destaque h2 {
+                font-size: 1.5rem;
+            }
+            .destaque p {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="topo">
+
+        <div class="titulo-com-logo">
+            <img src=" TechFlow.jpeg" alt="Logotipo TechFlow">
+            <h1>TechFlow · Inicio</h1>
+        </div>
+        <p style="color: #4a1942; margin: 10px 0;">Bem-vindo ao meu site!</p>
+
+        <!-- ===== MENU ===== -->
+        <div class="nav-bar">
+            <a href="inicio.html" class="active">Inicio</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="servicos.html">Servicos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="blog.html">Blog</a>
+            <a href="#rodape" class="anchor-link">Rodape</a>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== DESTAQUE ===== -->
+        <!-- ========================================================== -->
+        <div class="destaque">
+
+            <h2>TechFlow · Inovacao Digital</h2>
+
+            <p>
+                Bem-vindo ao meu site — um espaço onde a tecnologia encontra a criatividade. 
+                Este website foi desenvolvido como exercício prático para demonstrar um 
+                <strong>menu responsivo</strong> e a integração de diversos elementos HTML e CSS, 
+                seguindo <strong>todas as regras de acessibilidade e usabilidade</strong>.
+            </p>
+
+            <p>
+                Utilizamos tags semânticas (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, 
+                <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>), <strong>flexbox</strong> e 
+                <strong>media queries</strong> para criar uma navegação adaptável a qualquer ecrã.
+            </p>
+
+            <a href="sobre.html" class="btn-rosa">Conhecer mais →</a>
+
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== RODAPÉ ===== -->
+        <!-- ========================================================== -->
+        <footer class="footer" id="rodape">
+
+            <p style="font-weight: 600; color: #c2185b;">TechFlow · 2026</p>
+
+            <p style="color: #4a1942;">Desenvolvido com carinho para o curso de HTML</p>
+
+            <div class="footer-links">
+                <a href="#topo" class="anchor-link">Voltar ao Topo</a>
+                <a href="sobre.html" class="anchor-link">Sobre</a>
+                <a href="contacto.html" class="anchor-link">Contacto</a>
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>

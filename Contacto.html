@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow · Contacto</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e8e0f0 0%, #f3e5f5 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.95);
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(123, 75, 154, 0.2);
+        }
+       .titulo-com-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 4px solid #e8e0f0;
+            padding-bottom: 10px;
+        }
+        .titulo-com-logo img {
+            height: 90px;
+            width: auto;
+        }
+        .titulo-com-logo h1 {
+            color: #7b4b9a;
+            font-size: 2.5rem;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .nav-bar {
+            background: #f3e5f5;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .nav-bar a {
+            text-decoration: none;
+            color: #4a1942;
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+        .nav-bar a:hover,
+        .nav-bar a.active {
+            background: #7b4b9a;
+            color: white;
+            transform: scale(1.05);
+        }
+        .btn-rosa {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #7b4b9a, #c2185b);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-rosa:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(123, 75, 154, 0.4);
+        }
+        .btn-whatsapp {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #25c1d3;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
+        }
+        .card {
+            background: #fff5f7;
+            border-radius: 20px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 6px solid #7b4b9a;
+        }
+        .card h3 {
+            color: #7b4b9a;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #4a1942;
+            line-height: 1.8;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e8e0f0;
+            text-align: center;
+        }
+        .anchor-link {
+            background: #f3e5f5;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #4a1942;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .anchor-link:hover {
+            background: #7b4b9a;
+            color: white;
+        }
+        .footer-links {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .form-group {
+            margin: 20px 0;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #4a1942;
+        }
+        .form-group label .obrigatorio {
+            color: #c2185b;
+            font-weight: 700;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e8e0f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: 0.3s;
+            font-family: inherit;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #7b4b9a;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(123, 75, 154, 0.2);
+        }
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 10px 0;
+        }
+        .contact-info p {
+            flex: 1 1 200px;
+            color: #4a1942;
+        }
+        .contact-info strong {
+            color: #7b4b9a;
+        }
+        .whatsapp-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #11f09b;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .whatsapp-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="topo">
+
+        <div class="titulo-com-logo">
+            <img src=" TechFlow.jpeg" alt="Logotipo TechFlow">
+            <h1>TechFlow · Contacto</h1>
+        </div>
+        <p style="color: #4a1942; margin: 10px 0;">Entre em contacto connosco.</p>
+
+        <!-- MENU DE NAVEGACAO -->
+        <div class="nav-bar">
+            <a href="inicio.html">Inicio</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="servicos.html">Servicos</a>
+            <a href="contacto.html" class="active">Contacto</a>
+            <a href="blog.html">Blog</a>
+            <a href="#rodape">Rodape</a>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== SECCAO CONTACTO ===== -->
+        <!-- ========================================================== -->
+
+        <div class="card">
+            <h3>Contacto</h3>
+            <p>Estamos disponiveis para duvidas, parcerias ou sugestoes. Utilize o formulario abaixo ou os canais de contacto.</p>
+        </div>
+
+        <!-- FORMULARIO COM ENVIO PARA EMAIL -->
+        <div class="card" style="border-left-color: #c2185b;">
+            <h3>Formulario de contacto</h3>
+            <form action="mailto:jorgevirgiliosalatoceniza@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="nome">Nome completo <span class="obrigatorio">*</span></label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail <span class="obrigatorio">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Digite o seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="assunto">Assunto <span class="obrigatorio">*</span></label>
+                    <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem <span class="obrigatorio">*</span></label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Digite a sua mensagem aqui..." required></textarea>
+                </div>
+                <button type="submit" class="btn-rosa">Enviar mensagem</button>
+            </form>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #718096;">
+                <em>Ao clicar em "Enviar mensagem", o seu email sera aberto com os dados preenchidos.</em>
+            </p>
+        </div>
+
+        <!-- CONTACTOS COM WHATSAPP (SEM TWITTER) -->
+        <div class="card" style="border-left-color: #39c18d;">
+            <h3>Contactos</h3>
+            <div class="contact-info">
+                <p><strong>Telefone:</strong> +258 847351033</p>
+                <p><strong>Email:</strong> jorgevirgiliosalatoceniza@gmail.com</p>
+                <p><strong>LinkedIn:</strong> TechFlow</p>
+            </div>
+            <div style="margin-top: 15px;">
+                <a href="https://wa.me/258847351033" target="_blank" class="whatsapp-link">
+                    <span style="font-size: 1.5rem;">&#128222;</span> Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <!-- LINKS RELACIONADOS -->
+        <div class="card">
+            <h3>Links Relacionados</h3>
+            <p><strong>Links internos:</strong></p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0;">
+                <a href="inicio.html" class="anchor-link">Inicio</a>
+                <a href="sobre.html" class="anchor-link">Sobre</a>
+                <a href="servicos.html" class="anchor-link">Servicos</a>
+            </div>
+            <p><strong>Links externos:</strong></p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0;">
+                <a href="https://developer.mozilla.org/pt-BR/" target="_blank" rel="noopener noreferrer" class="btn-rosa" style="font-size:0.9rem; padding: 10px 20px;">MDN Web Docs</a>
+                <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer" class="btn-rosa" style="font-size:0.9rem; padding: 10px 20px; background: #f18cda;">W3Schools</a>
+            </div>
+        </div>
+
+        <!-- ===== RODAPE ===== -->
+        <footer class="footer" id="rodape">
+
+            <p style="font-weight: 600; color: #7b4b9a;">TechFlow · 2026</p>
+
+            <p style="color: #4a1942;">Desenvolvido com carinho para o curso de HTML</p>
+
+            <div class="footer-links">
+                <a href="#topo" class="anchor-link">Voltar ao Topo</a>
+                <a href="inicio.html" class="anchor-link">Inicio</a>
+                <a href="sobre.html" class="anchor-link">Sobre</a>
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
