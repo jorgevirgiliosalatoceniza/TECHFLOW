@@ -214,9 +214,9 @@
             <a href="sobre.html">Sobre</a>
             <a href="galeria.html">Galeria</a>
             <a href="servicos.html">Servicos</a>
-            <a href="contacto.html" class="active">Contacto</a>
             <a href="blog.html">Blog</a>
-            <a href="#rodape">Rodape</a>
+            <a href="contacto.html" class="active">Contacto</a>
+           
         </div>
 
         <!-- ========================================================== -->
@@ -231,23 +231,28 @@
         <!-- FORMULARIO COM ENVIO PARA EMAIL -->
         <div class="card" style="border-left-color: #c2185b;">
             <h3>Formulario de contacto</h3>
-            <form action="mailto:jorgevirgiliosalatoceniza@gmail.com" method="post" enctype="text/plain">
-                <div class="form-group">
-                    <label for="nome">Nome completo <span class="obrigatorio">*</span></label>
-                    <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail <span class="obrigatorio">*</span></label>
-                    <input type="email" id="email" name="email" placeholder="Digite o seu e-mail" required>
-                </div>
-                <div class="form-group">
-                    <label for="assunto">Assunto <span class="obrigatorio">*</span></label>
-                    <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" required>
-                </div>
-                <div class="form-group">
-                    <label for="mensagem">Mensagem <span class="obrigatorio">*</span></label>
-                    <textarea id="mensagem" name="mensagem" placeholder="Digite a sua mensagem aqui..." required></textarea>
-                </div>
+           <form action="https://formsubmit.co/jorgevirgiliosalatoceniza@gmail.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Nova mensagem do site TechFlow">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://jorgevirgiliosalatoceniza.github.io/dpwhtml/contacto.html">
+
+            <div class="form-group">
+              <label for="nome">Nome completo <span class="obrigatorio">*</span></label>
+              <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required>
+            </div>
+               <div class="form-group">
+               <label for="email">E-mail <span class="obrigatorio">*</span></label>
+               <input type="email" id="email" name="email" placeholder="Digite o seu e-mail" required>
+           </div>
+           <div class="form-group">
+                <label for="assunto">Assunto <span class="obrigatorio">*</span></label>
+                <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" required>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem <span class="obrigatorio">*</span></label>
+                <textarea id="mensagem" name="mensagem" placeholder="Digite a sua mensagem aqui..." required></textarea>
+            </div>
                 <button type="submit" class="btn-rosa">Enviar mensagem</button>
             </form>
             <p style="margin-top: 15px; font-size: 0.9rem; color: #718096;">
@@ -265,7 +270,10 @@
             </div>
             <div style="margin-top: 15px;">
                 <a href="https://wa.me/258847351033" target="_blank" class="whatsapp-link">
-                    <span style="font-size: 1.5rem;">&#128222;</span> Falar no WhatsApp
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/120px-WhatsApp.svg.png" 
+                  alt="WhatsApp" 
+                  style="width: 28px; height: 28px; vertical-align: middle; margin-right: 8px;">
+                  Falar no WhatsApp
                 </a>
             </div>
         </div>
@@ -293,12 +301,7 @@
 
             <p style="color: #4a1942;">Desenvolvido com carinho para o curso de HTML</p>
 
-            <div class="footer-links">
-                <a href="#topo" class="anchor-link">Voltar ao Topo</a>
-                <a href="inicio.html" class="anchor-link">Inicio</a>
-                <a href="sobre.html" class="anchor-link">Sobre</a>
-            </div>
-
+           
         </footer>
 
     </div>
