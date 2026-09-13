@@ -4,22 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechFlow · Blog</title>
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
             min-height: 100vh;
             padding: 20px;
         }
+
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            background: rgba(255,255,255,0.95);
+            background: rgba(255,255,255,0.96);
             border-radius: 30px;
             padding: 30px;
-            box-shadow: 0 20px 60px rgba(248, 187, 208, 0.3);
+            box-shadow: 0 20px 60px rgba(248,187,208,0.3);
         }
+
+        /* CABEÇALHO */
         .titulo-com-logo {
             display: flex;
             align-items: center;
@@ -27,16 +36,18 @@
             border-bottom: 4px solid #e8e0f0;
             padding-bottom: 10px;
         }
+
         .titulo-com-logo img {
             height: 90px;
             width: auto;
         }
+
         .titulo-com-logo h1 {
             color: #7b4b9a;
             font-size: 2.5rem;
-            border-bottom: none;
-            padding-bottom: 0;
         }
+
+        /* MENU */
         .nav-bar {
             background: #fce4ec;
             padding: 15px;
@@ -47,6 +58,7 @@
             gap: 15px;
             justify-content: center;
         }
+
         .nav-bar a {
             text-decoration: none;
             color: #4a1942;
@@ -55,240 +67,371 @@
             border-radius: 25px;
             transition: 0.3s;
         }
+
         .nav-bar a:hover,
         .nav-bar a.active {
             background: #c2185b;
             color: white;
             transform: scale(1.05);
         }
-        .btn-rosa {
+
+        /* INTRODUÇÃO */
+        .blog-intro {
+            text-align: center;
+            padding: 25px 15px;
+            margin-bottom: 25px;
+        }
+
+        .blog-intro h2 {
+            color: #c2185b;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .blog-intro p {
+            color: #4a1942;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* ARTIGO EM DESTAQUE */
+        .destaque {
+            background: linear-gradient(135deg, #fff5f7, #fce4ec);
+            border-radius: 25px;
+            padding: 30px;
+            margin-bottom: 35px;
+            border-left: 7px solid #c2185b;
+            box-shadow: 0 8px 25px rgba(194,24,91,0.12);
+        }
+
+        .destaque .categoria {
             display: inline-block;
-            padding: 12px 30px;
-            background: linear-gradient(135deg, #c2185b, #f48fb1);
+            background: #c2185b;
             color: white;
-            text-decoration: none;
-            border-radius: 30px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
             font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .destaque .data {
+            color: #7b4b9a;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .destaque h2 {
+            color: #7b4b9a;
+            font-size: 1.8rem;
+            margin: 12px 0;
+        }
+
+        .destaque p {
+            color: #4a1942;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        /* TÍTULO DA SECÇÃO */
+        .titulo-seccao {
+            color: #c2185b;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f8bbd0;
+            padding-bottom: 8px;
+        }
+
+        /* GRELHA DOS ARTIGOS */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .blog-post {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid #f8bbd0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
             transition: 0.3s;
-            margin-top: 10px;
-            border: none;
-            cursor: pointer;
         }
-        .btn-rosa:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(194, 24, 91, 0.4);
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(194,24,91,0.15);
         }
-        .card {
+
+        .blog-post .data {
+            color: #7b4b9a;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .blog-post h3 {
+            color: #c2185b;
+            margin: 10px 0;
+            line-height: 1.4;
+        }
+
+        .blog-post p {
+            color: #4a1942;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .categoria {
+            display: inline-block;
+            background: #fce4ec;
+            color: #c2185b;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        .leia-mais {
+            display: inline-block;
+            margin-top: 15px;
+            color: #c2185b;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .leia-mais:hover {
+            color: #7b4b9a;
+        }
+
+        /* TEMAS */
+        .temas {
+            margin-top: 35px;
             background: #fff5f7;
             border-radius: 20px;
             padding: 25px;
-            margin: 25px 0;
-            border-left: 6px solid #f48fb1;
+            border-left: 6px solid #7b4b9a;
         }
-        .card h3 {
+
+        .temas h3 {
+            color: #7b4b9a;
+            margin-bottom: 15px;
+        }
+
+        .tema-lista {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tema {
+            background: white;
+            border: 1px solid #f8bbd0;
             color: #c2185b;
-            margin-bottom: 10px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
         }
-        .card p {
-            color: #4a1942;
-            line-height: 1.8;
-        }
+
+        /* RODAPÉ */
         .footer {
             margin-top: 40px;
             padding-top: 20px;
             border-top: 2px solid #f8bbd0;
             text-align: center;
         }
-        .anchor-link {
-            background: #fce4ec;
-            padding: 10px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            color: #4a1942;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-        .anchor-link:hover {
-            background: #c2185b;
-            color: white;
-        }
-        .footer-links {
-            margin-top: 15px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
 
-        /* Estilos do Blog */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 20px 0;
-        }
-        .blog-post {
-            background: white;
-            border-radius: 20px;
-            padding: 25px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-            transition: 0.3s;
-        }
-        .blog-post:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(194, 24, 91, 0.15);
-        }
-        .blog-post .data {
-            color: #f48fb1;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        .blog-post h3 {
-            color: #c2185b;
-            margin: 8px 0;
-        }
-        .blog-post p {
-            color: #4a1942;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-        .blog-post .categoria {
-            display: inline-block;
-            background: #fce4ec;
-            color: #c2185b;
-            padding: 3px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-top: 10px;
-        }
-        .blog-post .leia-mais {
-            display: inline-block;
-            margin-top: 12px;
-            color: #c2185b;
-            font-weight: 600;
-            text-decoration: none;
-            border-bottom: 2px solid #f48fb1;
-        }
-        .blog-post .leia-mais:hover {
-            color: #7b4b9a;
+        /* RESPONSIVO */
+        @media (max-width: 700px) {
+            .container {
+                padding: 20px;
+            }
+
+            .titulo-com-logo h1 {
+                font-size: 1.8rem;
+            }
+
+            .titulo-com-logo img {
+                height: 65px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
 
-    <div class="container" id="topo">
+<div class="container" id="topo">
 
-        <div class="titulo-com-logo">
-            <img src=" TechFlow.jpeg" alt="Logotipo TechFlow">
-            <h1>TechFlow · Blog</h1>
-        </div>
-        <p style="color: #4a1942; margin: 10px 0;">Artigos e novidades sobre desenvolvimento web.</p>
+    <!-- CABEÇALHO -->
+    <div class="titulo-com-logo">
+        <img src="TechFlow.jpeg" alt="Logotipo TechFlow">
+        <h1>TechFlow · Blog</h1>
+    </div>
 
-        <!-- MENU DE NAVEGACAO -->
-        <div class="nav-bar">
-            <a href="index.html">Inicio</a>
-            <a href="Sobre.html">Sobre</a>
-            <a href="Galeria.html">Galeria</a>
-            <a href="Servicos.html">Servicos</a>
-            <a href="Blog.html" class="active">Blog</a>
-            <a href="Contacto.html">Contacto</a>
-        </div>
+    <!-- MENU -->
+    <div class="nav-bar">
+        <a href="index.html">Inicio</a>
+        <a href="Sobre.html">Sobre</a>
+        <a href="Galeria.html">Galeria</a>
+        <a href="Servicos.html">Servicos</a>
+        <a href="Blog.html" class="active">Blog</a>
+        <a href="Contacto.html">Contacto</a>
+    </div>
 
-        <!-- ========================================================== -->
-        <!-- ===== SECCAO BLOG ===== -->
-        <!-- ========================================================== -->
+    <!-- INTRODUÇÃO -->
+    <section class="blog-intro">
+        <h2>Blog TechFlow</h2>
+        <p>
+            Conteúdos, dicas e novidades sobre desenvolvimento web,
+            tecnologia, design e criação de websites.
+        </p>
+    </section>
 
-        <div class="card">
-            <h3>Artigos recentes</h3>
-            <p>Fique atenta aos nossos artigos sobre desenvolvimento web, HTML, CSS e muito mais!</p>
-        </div>
+    <!-- ARTIGO EM DESTAQUE -->
+    <section class="destaque">
 
-        <div class="blog-grid">
+        <span class="categoria">DESTAQUE</span>
 
-            <!-- ARTIGO 1 -->
-            <div class="blog-post">
-                <span class="data">11 de Agosto, 2026</span>
-                <h3>Como criar um menu responsivo com HTML e CSS</h3>
-                <p>Aprenda a criar menus que se adaptam a qualquer dispositivo, usando Flexbox e Media Queries.</p>
-                <span class="categoria">CSS</span>
-                <a href="#" class="leia-mais">Leia mais →</a>
-            </div>
+        <span class="data">
+            11 de Agosto, 2026
+        </span>
 
-            <!-- ARTIGO 2 -->
-            <div class="blog-post">
-                <span class="data">8 de Agosto, 2026</span>
-                <h3>Dicas de acessibilidade para websites</h3>
-                <p>Como tornar o seu site acessivel para todos os utilizadores, incluindo pessoas com deficiencia.</p>
-                <span class="categoria">Acessibilidade</span>
-                <a href="#" class="leia-mais">Leia mais →</a>
-            </div>
+        <h2>Como criar um menu responsivo com HTML e CSS</h2>
 
-            <!-- ARTIGO 3 -->
-            <div class="blog-post">
-                <span class="data">5 de Agosto, 2026</span>
-                <h3>Guia de usabilidade para iniciantes</h3>
-                <p>Conheca as melhores praticas para criar interfaces intuitivas e faceis de usar.</p>
-                <span class="categoria">Usabilidade</span>
-                <a href="#" class="leia-mais">Leia mais →</a>
-            </div>
+        <p>
+            Aprenda os principais conceitos para criar menus que se
+            adaptam a computadores, tablets e telemóveis utilizando
+            HTML, CSS, Flexbox e Media Queries.
+        </p>
 
-            <!-- ARTIGO 4 -->
-            <div class="blog-post">
-                <span class="data">28 de Julho, 2026</span>
-                <h3>HTML semantico: porque e importante</h3>
-                <p>Entenda como o uso de tags semanticas melhora a acessibilidade e o SEO do seu site.</p>
-                <span class="categoria">HTML</span>
-                <a href="#" class="leia-mais">Leia mais →</a>
-            </div>
+        <a href="#" class="leia-mais">
+            Ler artigo →
+        </a>
 
-            <!-- ARTIGO 5 -->
-            <div class="blog-post">
-                <span class="data">20 de Julho, 2026</span>
-                <h3>Design responsivo: dicas para mobile first</h3>
-                <p>Aprenda a criar websites que funcionam perfeitamente em telemoveis, tablets e desktop.</p>
-                <span class="categoria">Design</span>
-                <a href="#" class="leia-mais">Leia mais →</a>
-            </div>
+    </section>
 
-            <!-- ARTIGO 6 -->
-            <div class="blog-post">
-                <span class="data">12 de Julho, 2026</span>
-                <h3>Como melhorar o desempenho do seu site</h3>
-                <p>Dicas para optimizar imagens, codigo e tornar o seu site mais rapido.</p>
-                <span class="categoria">Performance</span>
-                <a href="#" class="leia-mais">Leia mais →</a>
-            </div>
+    <!-- ARTIGOS -->
+    <h2 class="titulo-seccao">Artigos recentes</h2>
 
-        </div>
+    <div class="blog-grid">
 
-        <!-- LINKS RELACIONADOS -->
-        <div class="card" style="border-left-color: #7b4b9a;">
-            <h3>Links Relacionados</h3>
-            <p><strong>Links internos:</strong></p>
-            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0;">
-                <a href="index.html" class="anchor-link">Inicio</a>
-                <a href="Sobre.html" class="anchor-link">Sobre</a>
-                <a href="Servicos.html" class="anchor-link">Servicos</a>
-            </div>
-            <p><strong>Links externos:</strong></p>
-            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0;">
-                <a href="https://developer.mozilla.org/pt-BR/" target="_blank" rel="noopener noreferrer" class="btn-rosa" style="font-size:0.9rem; padding: 10px 20px;">MDN Web Docs</a>
-                <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer" class="btn-rosa" style="font-size:0.9rem; padding: 10px 20px; background: #331431;">W3Schools</a>
-            </div>
-        </div>
+        <article class="blog-post">
+            <span class="data">8 de Agosto, 2026</span>
 
-        <!-- ===== RODAPE ===== -->
-        <footer class="footer" id="rodape">
+            <h3>Dicas de acessibilidade para websites</h3>
 
-            <p style="font-weight: 600; color: #c2185b;">TechFlow · 2026</p>
+            <p>
+                Descubra como tornar um website mais acessível,
+                facilitando a utilização por diferentes pessoas.
+            </p>
 
-            <p style="color: #4a1942;">Desenvolvido com carinho para o curso de HTML</p>
+            <span class="categoria">Acessibilidade</span>
+
+            <a href="#" class="leia-mais">Ler artigo →</a>
+        </article>
 
 
-        </footer>
+        <article class="blog-post">
+            <span class="data">5 de Agosto, 2026</span>
+
+            <h3>Guia de usabilidade para iniciantes</h3>
+
+            <p>
+                Conheça boas práticas para criar interfaces simples,
+                intuitivas e fáceis de utilizar.
+            </p>
+
+            <span class="categoria">Usabilidade</span>
+
+            <a href="#" class="leia-mais">Ler artigo →</a>
+        </article>
+
+
+        <article class="blog-post">
+            <span class="data">28 de Julho, 2026</span>
+
+            <h3>HTML semântico: por que é importante</h3>
+
+            <p>
+                Entenda como as tags semânticas ajudam na organização,
+                acessibilidade e estrutura das páginas.
+            </p>
+
+            <span class="categoria">HTML</span>
+
+            <a href="#" class="leia-mais">Ler artigo →</a>
+        </article>
+
+
+        <article class="blog-post">
+            <span class="data">20 de Julho, 2026</span>
+
+            <h3>Design responsivo: mobile first</h3>
+
+            <p>
+                Aprenda conceitos importantes para desenvolver
+                websites adaptados a diferentes tamanhos de ecrã.
+            </p>
+
+            <span class="categoria">Design</span>
+
+            <a href="#" class="leia-mais">Ler artigo →</a>
+        </article>
+
+
+        <article class="blog-post">
+            <span class="data">12 de Julho, 2026</span>
+
+            <h3>Como melhorar o desempenho do seu site</h3>
+
+            <p>
+                Veja algumas práticas para otimizar imagens, código
+                e melhorar o carregamento das páginas.
+            </p>
+
+            <span class="categoria">Performance</span>
+
+            <a href="#" class="leia-mais">Ler artigo →</a>
+        </article>
 
     </div>
+
+    <!-- TEMAS -->
+    <section class="temas">
+
+        <h3>Temas do Blog</h3>
+
+        <div class="tema-lista">
+            <span class="tema">HTML</span>
+            <span class="tema">CSS</span>
+            <span class="tema">JavaScript</span>
+            <span class="tema">Design</span>
+            <span class="tema">Acessibilidade</span>
+            <span class="tema">Usabilidade</span>
+            <span class="tema">Performance</span>
+        </div>
+
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+
+        <p style="font-weight: 600; color: #c2185b;">
+            TechFlow · 2026
+        </p>
+
+        <p style="color: #4a1942;">
+            Desenvolvido para o curso de HTML
+        </p>
+
+    </footer>
+
+</div>
 
 </body>
 </html>
